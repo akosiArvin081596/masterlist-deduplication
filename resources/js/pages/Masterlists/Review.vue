@@ -6,6 +6,7 @@ import { update } from '@/actions/App/Http/Controllers/DuplicatePairController';
 import { index as reviewIndex } from '@/actions/App/Http/Controllers/DuplicatePairController';
 import MasterlistExportController from '@/actions/App/Http/Controllers/MasterlistExportController';
 import { destroy } from '@/actions/App/Http/Controllers/Auth/LoginController';
+import AppFooter from '@/components/AppFooter.vue';
 import { Form, Head, Link, router } from '@inertiajs/vue3';
 
 const props = defineProps<{
@@ -69,7 +70,7 @@ function displayValue(record: MasterlistRecord, key: keyof MasterlistRecord): st
 <template>
     <Head :title="`Review — ${masterlist.incident_name}`" />
 
-    <div class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
         <!-- Navbar -->
         <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -326,5 +327,7 @@ function displayValue(record: MasterlistRecord, key: keyof MasterlistRecord): st
                 </div>
             </div>
         </main>
+
+        <AppFooter />
     </div>
 </template>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useDarkMode } from '@/composables/useDarkMode';
 import type { Auth } from '@/types/auth';
+import AppFooter from '@/components/AppFooter.vue';
 import { Link, Head } from '@inertiajs/vue3';
 import { destroy } from '@/actions/App/Http/Controllers/Auth/LoginController';
 
@@ -71,7 +72,7 @@ const statCards = [
 <template>
     <Head title="Dashboard" />
 
-    <div class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
         <!-- Navbar -->
         <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -243,5 +244,7 @@ const statCards = [
                 </div>
             </div>
         </main>
+
+        <AppFooter />
     </div>
 </template>

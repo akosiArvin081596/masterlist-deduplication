@@ -7,6 +7,7 @@ import { index as reviewIndex } from '@/actions/App/Http/Controllers/DuplicatePa
 import { store } from '@/actions/App/Http/Controllers/MasterlistController';
 import MasterlistExportController from '@/actions/App/Http/Controllers/MasterlistExportController';
 import { destroy } from '@/actions/App/Http/Controllers/Auth/LoginController';
+import AppFooter from '@/components/AppFooter.vue';
 import { Form, Head, Link, usePoll } from '@inertiajs/vue3';
 import { computed, ref } from 'vue';
 
@@ -53,7 +54,7 @@ function formatDate(dateStr: string): string {
 <template>
     <Head title="Masterlists" />
 
-    <div class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
         <!-- Navbar -->
         <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -286,5 +287,7 @@ function formatDate(dateStr: string): string {
                 </div>
             </div>
         </main>
+
+        <AppFooter />
     </div>
 </template>

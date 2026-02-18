@@ -41,9 +41,7 @@ function submit(): void {
         </button>
         <!-- Branding -->
         <div class="sm:mx-auto sm:w-full sm:max-w-md text-center">
-            <div class="mx-auto w-16 h-16 bg-blue-900 dark:bg-blue-800 rounded-full flex items-center justify-center">
-                <span class="text-white text-2xl font-bold">DS</span>
-            </div>
+            <img src="/images/dswd-caraga-logo.jpg" alt="DSWD Caraga" class="mx-auto h-20 w-20 object-cover rounded-full" />
             <h1 class="mt-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
                 Masterlist Deduplication System
             </h1>
@@ -128,6 +126,11 @@ function submit(): void {
             <p class="mt-4 text-center text-xs text-gray-500 dark:text-gray-400">
                 For access concerns, contact your system administrator.
             </p>
+
+            <div class="mt-6 text-center">
+                <p class="text-xs text-gray-400 dark:text-gray-500">Developed by <span class="font-medium text-gray-500 dark:text-gray-400">Arvin B. Edubas</span></p>
+                <p class="text-xs text-gray-400 dark:text-gray-500">VSquared Technologies</p>
+            </div>
         </div>
     </div>
 </template>
