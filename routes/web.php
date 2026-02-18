@@ -1,14 +1,14 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeduplicationController;
 use App\Http\Controllers\DuplicatePairController;
 use App\Http\Controllers\MasterlistController;
 use App\Http\Controllers\MasterlistExportController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-Route::get('/', fn () => Inertia::render('Dashboard'))
+Route::get('/', DashboardController::class)
     ->name('home')
     ->middleware('auth');
 
